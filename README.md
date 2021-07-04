@@ -3,5 +3,5 @@
 
 #### 使用
 ```
-yum install gcc -y && curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/portforwarder.c > portforwarder.c && gcc -o portforwarder portforwarder.c && chmod +x portforwarder && ./portforwarder
+yum install gcc -y && wget https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/portforwarder.c -O portforwarder.c && gcc -o portforwarder portforwarder.c && chmod +x portforwarder && ./portforwarder
 ```
