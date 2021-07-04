@@ -8,7 +8,7 @@ int UserInterface();
 int main() {
 	int UserInterface();
 	if (run_mode == 1) {
-		printf("ÕıÔÚĞÂ½¨²¢´ò¿ªrealm¹æÔò. . .\n");
+		printf("æ­£åœ¨æ–°å»ºå¹¶æ‰“å¼€realmè§„åˆ™. . .\n");
 		config = fopen("/usr/bin/realm.json","w");
 		fprintf(config,"{\n    \"listening_addresses\": [\"0.0.0.0\"],\n    \"listening_ports\": [\"10000-10001\"],\n    \"remote_addresses\": [\"8.8.8.8\", \"8.8.4.4\"],\n    \"remote_ports\": [\"443\", \"853\"]\n}\n\n");
 		fclose(config);
@@ -16,18 +16,18 @@ int main() {
 		fprintf(service, "[Unit]\nDescription=realm\nAfter=network-online.target\nWants=network-online.target systemd-networkd-wait-online.service\n\n[Service]\nType=simple\nUser=root\nRestart=on-failure\nRestartSec=5s\nDynamicUser=true\nExecStart=/usr/bin/realm -c /usr/bin/realm.json\n\n[Install]\nWantedBy=multi-user.target\n\n");
 		fclose(service);
 		system("vi /usr/bin/realm.json");
-		printf("ÕıÔÚÏÂÔØrealm. . .\n");
+		printf("æ­£åœ¨ä¸‹è½½realm. . .\n");
 		system("cd /usr/bin && wget https://github.com/zhboner/realm/releases/latest/download/realm -O realm && chmod +x realm");
-		printf("ÕıÔÚ´ò¿ªÆô¶¯realm×ª·¢. . .\n");
+		printf("æ­£åœ¨æ‰“å¼€å¯åŠ¨realmè½¬å‘. . .\n");
 		system("systemctl enable --now realm");
 		system("systemctl start realm");
 	}
 	else if (run_mode == 2) {
-		printf("ÕıÔÚ¹Ø±Õrealm×ª·¢. . .\n");
+		printf("æ­£åœ¨å…³é—­realmè½¬å‘. . .\n");
 		system("systemctl stop realm");
-		printf("ÕıÔÚ´ò¿ªrealm¹æÔò. . .\n");
+		printf("æ­£åœ¨æ‰“å¼€realmè§„åˆ™. . .\n");
 		system("vi /usr/bin/realm.json");
-		printf("ÕıÔÚ´ò¿ªÆô¶¯realm×ª·¢. . .\n");
+		printf("æ­£åœ¨æ‰“å¼€å¯åŠ¨realmè½¬å‘. . .\n");
 		system("systemctl start realm");
 	}
 	else {
@@ -37,7 +37,8 @@ int main() {
 }
 
 int UserInterface(){
-	printf("1.°²×°realm\n\n2.±à¼­¹æÔò\n\n0.ÍË³ö\n\nÇëÊäÈë:");
+	printf("1.å®‰è£…realm\n\n2.ç¼–è¾‘è§„åˆ™\n\n0.é€€å‡º\n\nè¯·è¾“å…¥:");
 	scanf("%d", &run_mode);
 	return 0;
 }
+
