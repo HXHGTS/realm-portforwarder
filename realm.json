@@ -1,6 +1,6 @@
 {
     "listening_addresses": ["0.0.0.0"],
     "listening_ports": ["10000"],
-    "remote_addresses": ["8.8.8.8"],
-    "remote_ports": ["853"]
+    "remote_addresses": ["127.0.0.1"],
+    "remote_ports": ["443"]
 }
