@@ -1,5 +1,6 @@
 # realm-portforwarder
-基于realm的端口转发快速配置工具
+
+基于realm的端口转发快速配置工具,支持BBR
 
 #### 使用
 
