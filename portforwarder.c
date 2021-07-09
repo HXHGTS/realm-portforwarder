@@ -6,7 +6,7 @@ FILE* config,*service;
 int UserInterface();
 
 int main() {
-	int UserInterface();
+	UserInterface();
 	if (run_mode == 1) {
 		printf("正在新建并打开realm规则. . .\n");
 		system("curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.json > /usr/bin/realm.json");
