@@ -8,6 +8,11 @@ int UserInterface();
 int main() {
 	Menu:UserInterface();
 	if (run_mode == 1) {
+		printf("正在关闭并卸载防火墙. . .\n");
+		system("systemctl disable iptables");
+		system("systemctl stop iptables");
+		system("systemctl disable firewalld");
+		system("systemctl stop firewalld");
 		printf("正在新建并打开realm规则. . .\n");
 		system("curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.json > /usr/bin/realm.json");
 		system("curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.service > /etc/systemd/system/realm.service");
