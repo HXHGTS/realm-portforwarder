@@ -26,6 +26,16 @@ int main() {
 		printf("正在打开启动realm转发. . .\n");
 		system("systemctl start realm");
 	}
+	else if (run_mode == 3) {
+		printf("正在重启realm转发. . .\n");
+		system("systemctl stop realm");
+		system("systemctl start realm");
+	}
+	else if (run_mode == 4) {
+		printf("正在关闭realm转发. . .\n");
+		system("systemctl stop realm");
+		system("systemctl disable realm");
+	}
 	else {
 		exit(0);
 	}
@@ -33,7 +43,7 @@ int main() {
 }
 
 int UserInterface(){
-	printf("1.安装realm\n\n2.编辑规则\n\n0.退出\n\n请输入:");
+	printf("1.安装realm\n\n2.编辑规则\n\n3.重启realm\n\n4.关闭realm\n\n0.退出\n\n请输入:");
 	scanf("%d", &run_mode);
 	return 0;
 }
