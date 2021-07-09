@@ -6,7 +6,7 @@ FILE* config,*service;
 int UserInterface();
 
 int main() {
-	UserInterface();
+	Menu:UserInterface();
 	if (run_mode == 1) {
 		printf("正在新建并打开realm规则. . .\n");
 		system("curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.json > /usr/bin/realm.json");
@@ -39,10 +39,15 @@ int main() {
 	else {
 		exit(0);
 	}
+	goto Menu;
 	return 0;
 }
 
 int UserInterface(){
+	system("clear");
+	printf("-----------------------------------------------\n");
+	printf("---------------realm端口转发控制台-------------\n");
+	printf("-----------------------------------------------\n");
 	printf("1.安装realm\n\n2.编辑规则\n\n3.重启realm\n\n4.关闭realm\n\n0.退出\n\n请输入:");
 	scanf("%d", &run_mode);
 	return 0;
