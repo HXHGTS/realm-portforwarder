@@ -46,7 +46,7 @@ int main() {
 		printf("已关闭realm转发!\n");
 	}
 	else if (run_mode == 5) {
-		system("systemctl status realm");
+		system("systemctl status realm -l");
 	}
 	else if (run_mode == 6) {
 		printf("正在关闭realm转发. . .\n");
