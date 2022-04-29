@@ -23,7 +23,7 @@ int main() {
 		system("curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.service > /etc/systemd/system/realm.service");
 		system("vi /etc/realm/realm.toml");
 		printf("正在下载realm. . .\n");
-		system("wget https://github.com/zhboner/realm/releases/download/v2.1.1/realm-x86_64-unknown-linux-gnu.tar.gz -O /root/realm-x86_64-unknown-linux-gnu.tar.gz");
+		system("wget https://github.com/zhboner/realm/releases/latest/download/realm-x86_64-unknown-linux-gnu.tar.gz -O /root/realm-x86_64-unknown-linux-gnu.tar.gz");
 		system("tar -zxvf realm-x86_64-unknown-linux-gnu.tar.gz");
 		system("rm -f realm-x86_64-unknown-linux-gnu.tar.gz");
 		system("mv -f /root/realm /usr/bin/realm");
