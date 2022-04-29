@@ -1,0 +1,7 @@
+[[endpoints]]
+listen = "::0:10000"
+remote = "dash.cloudflare.com:443"
+
+[[endpoints]]
+listen = "::0:10001"
+remote = "dash.cloudflare.com:2053"
