@@ -20,7 +20,7 @@ int main() {
 		printf("正在新建并打开realm规则. . .\n");
 		system("mkdir -p /etc/realm");
 		system("curl -sSL https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.toml > /etc/realm/realm.toml");
-		system("curl https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.service > /etc/systemd/system/realm.service");
+		system("curl -sSL https://raw.githubusercontent.com/HXHGTS/realm-portforwarder/main/realm.service > /etc/systemd/system/realm.service");
 		system("vi /etc/realm/realm.toml");
 		printf("正在下载realm. . .\n");
 		system("wget https://github.com/zhboner/realm/releases/latest/download/realm-x86_64-unknown-linux-gnu.tar.gz -O /root/realm-x86_64-unknown-linux-gnu.tar.gz");
